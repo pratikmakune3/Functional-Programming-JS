@@ -1,8 +1,10 @@
 // // 2.2
-// const DEVELOPMENT = true;
+const DEVELOPMENT = true;
 
 const fetchDataReal = () => {
   // Time intensive task
+  console.log("Fetching real data...");
+  // return realPersonObject
 };
 
 const fetchDataFake = () => ({
@@ -10,7 +12,9 @@ const fetchDataFake = () => ({
   age: 28,
 });
 
-const fetchData = DEVELOPMENT ? fetchDataFake() : fetchDataReal;
+const fetchData = DEVELOPMENT ? fetchDataFake : fetchDataReal;
+
+const result = fetchData();
 
 // // 2.3
 const double = (x) => x * 2;
